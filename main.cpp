@@ -4,8 +4,13 @@
 
 int main()
 {
-	Engine engine = Engine();
-	engine.run();
+	while (true)
+	{
+		Engine* engine = new Engine();
+		engine->run();
+		system("pause");
+		delete engine;
+	}
 
 	return 0;
 }

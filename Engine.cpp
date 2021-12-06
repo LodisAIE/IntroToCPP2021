@@ -10,6 +10,11 @@ Engine::Engine()
 	m_currentFighterIndex = 0;
 }
 
+Engine::~Engine()
+{
+	delete[] m_scenes;
+}
+
 void Engine::run()
 {
 	start();
@@ -33,6 +38,9 @@ void Engine::start()
 	m_entities[1] = redactedLittleSkeleton;
 	m_entities[2] = unclePhil;
 	m_entityCount = 3;
+
+	int test = 5;
+	Entity* entityPtrs[5];
 
 	m_currentFighter1 = &m_entities[0];
 	m_currentFighter2 = &m_entities[1];
@@ -66,8 +74,6 @@ void Engine::draw()
 {
 	m_currentFighter1->printStats();
 	m_currentFighter2->printStats();
-	system("pause");
-	system("cls");
 }
 
 void Engine::end()
