@@ -33,4 +33,5 @@ private:
 
 	Scene** m_scenes;
 	int m_sceneCount;
+	int m_currentSceneIndex;
 };
